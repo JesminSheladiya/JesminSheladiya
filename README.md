@@ -36,15 +36,16 @@
 
 <div align="center">
   
-| Frontend | Backend & Database | Tools & Platforms |
-|----------|--------------------|-------------------|
-| <img src="https://skillicons.dev/icons?i=html" width="30"/> HTML | <img src="https://skillicons.dev/icons?i=java" width="30"/> Core Java | <img src="https://skillicons.dev/icons?i=postman" width="30"/> Postman |
-| <img src="https://skillicons.dev/icons?i=css" width="30"/> CSS | <img src="https://skillicons.dev/icons?i=postgres" width="30"/> PostgreSQL | <img src="https://skillicons.dev/icons?i=vercel" width="30"/> Vercel |
-| <img src="https://skillicons.dev/icons?i=bootstrap" width="30"/> Bootstrap | <img src="https://skillicons.dev/icons?i=firebase" width="30"/> Firebase | <img src="https://skillicons.dev/icons?i=threejs" width="30"/> Three.js |
-| <img src="https://skillicons.dev/icons?i=jquery" width="30"/> jQuery |  |  <img src="https://skillicons.dev/icons?i=github" width="30"/> GitHub  |
-| <img src="https://skillicons.dev/icons?i=javascript" width="30"/> JavaScript | 
-| <img src="https://skillicons.dev/icons?i=react" width="30"/> React |  |  |
-| <img src="https://skillicons.dev/icons?i=nextjs" width="30"/> Next.js |  |  |
+| **Frontend** | **Backend** | **Database** | **DevOps & Cloud** | **Tools & Libraries** |
+| ------------ | ----------- | ------------ | ------------------ | --------------------- |
+| <img src="https://skillicons.dev/icons?i=html" width="25"/> HTML | <img src="https://skillicons.dev/icons?i=java" width="25"/> Core Java | <img src="https://skillicons.dev/icons?i=postgres" width="25"/> PostgreSQL | <img src="https://skillicons.dev/icons?i=vercel" width="25"/> Vercel | <img src="https://skillicons.dev/icons?i=postman" width="25"/> Postman |
+| <img src="https://skillicons.dev/icons?i=css" width="25"/> CSS3 | <img src="https://skillicons.dev/icons?i=firebase" width="25"/> Firebase |  | <img src="https://skillicons.dev/icons?i=github" width="25"/> GitHub | <img src="https://skillicons.dev/icons?i=threejs" width="25"/> Three.js |
+| <img src="https://skillicons.dev/icons?i=bootstrap" width="25"/> Bootstrap |  |  |  |  |
+| <img src="https://skillicons.dev/icons?i=jquery" width="25"/> jQuery |  |  |  |  |
+| <img src="https://skillicons.dev/icons?i=javascript" width="25"/> JavaScript |  |  |  |  |
+| <img src="https://skillicons.dev/icons?i=react" width="25"/> React |  |  |  |  |
+| <img src="https://skillicons.dev/icons?i=nextjs" width="25"/> Next.js |  |  |  |  |
+
 
 </div>
 
