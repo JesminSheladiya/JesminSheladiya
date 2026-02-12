@@ -34,20 +34,31 @@
 
 ## 🛠 Tech Stack
 
+
 <div align="center">
-  
-| **Frontend** | **Backend** | **Database** | **DevOps & Cloud** | **Tools & Libraries** |
-| ------------ | ----------- | ------------ | ------------------ | --------------------- |
-| <img src="https://skillicons.dev/icons?i=html" width="25"/> HTML | <img src="https://skillicons.dev/icons?i=java" width="25"/> Core Java | <img src="https://skillicons.dev/icons?i=postgres" width="25"/> PostgreSQL | <img src="https://skillicons.dev/icons?i=vercel" width="25"/> Vercel | <img src="https://skillicons.dev/icons?i=postman" width="25"/> Postman |
-| <img src="https://skillicons.dev/icons?i=css" width="25"/> CSS3 | <img src="https://skillicons.dev/icons?i=firebase" width="25"/> Firebase |  | <img src="https://skillicons.dev/icons?i=github" width="25"/> GitHub | <img src="https://skillicons.dev/icons?i=threejs" width="25"/> Three.js |
-| <img src="https://skillicons.dev/icons?i=bootstrap" width="25"/> Bootstrap |  |  |  |  |
-| <img src="https://skillicons.dev/icons?i=jquery" width="25"/> jQuery |  |  |  |  |
-| <img src="https://skillicons.dev/icons?i=javascript" width="25"/> JavaScript |  |  |  |  |
-| <img src="https://skillicons.dev/icons?i=react" width="25"/> React |  |  |  |  |
-| <img src="https://skillicons.dev/icons?i=nextjs" width="25"/> Next.js |  |  |  |  |
+
+
+<!-- TABLE 1 -->
+| **Languages & Core** | **Frameworks & Libraries** | **Backend & BaaS** |
+|----------------------|----------------------------|-----------------|
+| <img src="https://skillicons.dev/icons?i=html" width="25"/> HTML5 | <img src="https://skillicons.dev/icons?i=react" width="25"/> React | <img src="https://skillicons.dev/icons?i=java" width="25"/> Core Java |
+| <img src="https://skillicons.dev/icons?i=css" width="25"/> CSS3 | <img src="https://skillicons.dev/icons?i=nextjs" width="25"/> Next.js | <img src="https://skillicons.dev/icons?i=firebase" width="25"/> Firebase (BaaS) |
+| <img src="https://skillicons.dev/icons?i=javascript" width="25"/> JavaScript | <img src="https://skillicons.dev/icons?i=bootstrap" width="25"/> Bootstrap | |
+| <img src="https://skillicons.dev/icons?i=jquery" width="25"/> jQuery | <img src="https://skillicons.dev/icons?i=threejs" width="25"/> Three.js | |
+
+
+<br/>
+
+
+<!-- TABLE 2 -->
+| **Database & Management** | **DevOps & Deployment** | **CMS & Automation** | **API & Testing** |
+|--------------------------|-------------------------|----------------------|-----------------|
+| <img src="https://skillicons.dev/icons?i=postgres" width="25"/> PostgreSQL | <img src="https://skillicons.dev/icons?i=github" width="25"/> GitHub | <img src="https://skillicons.dev/icons?i=wordpress" width="25"/> WordPress | <img src="https://skillicons.dev/icons?i=postman" width="25"/> Postman |
+| <img src="https://skillicons.dev/icons?i=php" width="25"/> phpMyAdmin | <img src="https://skillicons.dev/icons?i=vercel" width="25"/> Vercel | <img src="https://meta-q.cdn.bubble.io/cdn-cgi/image/w=64,h=64,f=auto,dpr=1,fit=contain/f1740327389123x713161792968389100/n8n%20plugin.png" width="25"/> n8n | |
 
 
 </div>
+
 
 ---
 
