@@ -25,7 +25,7 @@
 
 ## 🚀 About Me
 
-- 💻 I’m a **Web Developer** from India 🇮🇳  
+- 💻 I’m a **Software Developer** from India 🇮🇳  
 - 🎯 I build **responsive & user‑friendly websites**  
 - 📫 Email: **jesminsheladiya1832@gmail.com**  
 - 🔗 LinkedIn: https://www.linkedin.com/in/jesmin-sheladiya
@@ -41,7 +41,7 @@
 <!-- TABLE 1 -->
 | **Languages & Core** | **Frameworks & Libraries** | **Backend & BaaS** |
 |----------------------|----------------------------|-----------------|
-| <img src="https://skillicons.dev/icons?i=html" width="25"/> HTML5 | <img src="https://skillicons.dev/icons?i=react" width="25"/> React | <img src="https://skillicons.dev/icons?i=java" width="25"/> Core Java |
+| <img src="https://skillicons.dev/icons?i=html" width="25"/> HTML5 | <img src="https://skillicons.dev/icons?i=react" width="25"/> React.js | <img src="https://skillicons.dev/icons?i=java" width="25"/> Java |
 | <img src="https://skillicons.dev/icons?i=css" width="25"/> CSS3 | <img src="https://skillicons.dev/icons?i=nextjs" width="25"/> Next.js | <img src="https://skillicons.dev/icons?i=firebase" width="25"/> Firebase (BaaS) |
 | <img src="https://skillicons.dev/icons?i=javascript" width="25"/> JavaScript | <img src="https://skillicons.dev/icons?i=bootstrap" width="25"/> Bootstrap | |
 | <img src="https://skillicons.dev/icons?i=jquery" width="25"/> jQuery | <img src="https://skillicons.dev/icons?i=threejs" width="25"/> Three.js | |
@@ -67,8 +67,8 @@
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
     <td align="center">
-      <a href="https://github.com/JesminSheladiya/GHCI24-Photo-Editor-Frame-Uploader">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI24-Photo-Editor-Frame-Uploader&theme=dark" alt="Photo Editor" width="100%" />
+      <a href="https://github.com/JesminSheladiya/NetWorld">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=NetWorld&theme=dark" alt="NetWorld" width="100%" />
       </a>
     </td>
     <td align="center">
@@ -79,8 +79,8 @@
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/JesminSheladiya/NetWorld">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=NetWorld&theme=dark" alt="NetWorld" width="100%" />
+      <a href="https://github.com/JesminSheladiya/GHCI24-Photo-Editor-Frame-Uploader">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI24-Photo-Editor-Frame-Uploader&theme=dark" alt="Photo Editor" width="100%" />
       </a>
     </td>
     <td align="center">
