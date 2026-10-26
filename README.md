@@ -72,20 +72,20 @@
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/JesminSheladiya/GHCI25-Photo-Badge">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI25-Photo-Badge&theme=dark" alt="Photo Badge" width="100%" />
+      <a href="https://github.com/JesminSheladiya/ToDo-App">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=ToDo-App&theme=dark" alt="ToDo-App" width="100%" />
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/JesminSheladiya/GHCI24-Photo-Editor-Frame-Uploader">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI24-Photo-Editor-Frame-Uploader&theme=dark" alt="Photo Editor" width="100%" />
+      <a href="https://github.com/JesminSheladiya/GHCI25-Photo-Badge">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI25-Photo-Badge&theme=dark" alt="Photo Badge" width="100%" />
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/JesminSheladiya/Precondo">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=Precondo&theme=dark" alt="Precondo" width="100%" />
+      <a href="https://github.com/JesminSheladiya/GHCI24-Photo-Editor-Frame-Uploader">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI24-Photo-Editor-Frame-Uploader&theme=dark" alt="Photo Editor" width="100%" />
       </a>
     </td>
   </tr>
