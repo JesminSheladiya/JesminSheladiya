@@ -1,0 +1,130 @@
+<svg xmlns="http://w3.org" viewBox="0 0 850 360" width="850" height="360" fill="none">
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.02); }
+    }
+    @keyframes scan {
+      0% { top: 0%; opacity: 0; }
+      5% { opacity: 0.8; }
+      95% { opacity: 0.8; }
+      100% { top: 100%; opacity: 0; }
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    @keyframes type1 { 0%, 10% { width: 0; } 40%, 100% { width: 100%; } }
+    @keyframes type2 { 0%, 40% { width: 0; } 70%, 100% { width: 100%; } }
+    @keyframes type3 { 0%, 70% { width: 0; } 95%, 100% { width: 100%; } }
+    
+    .bg-glow { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .terminal-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 14px; fill: #a5d6ff; }
+    .keyword { fill: #ff7b72; font-weight: bold; }
+    .string { fill: #a5d6ff; }
+    .variable { fill: #ffa657; }
+    .typing { display: inline-block; white-space: nowrap; overflow: hidden; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="850" height="360" rx="16" fill="#0d1117"/>
+  <rect width="848" height="358" x="1" y="1" rx="15" stroke="#30363d" stroke-width="2"/>
+  
+  <!-- Cyber Backdrop Grid Decor -->
+  <g opacity="0.08" style="animation: pulse 4s ease-in-out infinite;">
+    <path d="M0 40 H850 M0 80 H850 M0 120 H850 M0 160 H850 M0 200 H850 M0 240 H850 M0 280 H850 M0 320 H850" stroke="#58a6ff" stroke-width="1"/>
+    <path d="M80 0 V360 M160 0 V360 M240 0 V360 M320 0 V360 M400 0 V360 M480 0 V360 M560 0 V360 M640 0 V360 M720 0 V360 M800 0 V360" stroke="#58a6ff" stroke-width="1"/>
+  </g>
+
+  <!-- Left Window Block (Visual Avatar Frame) -->
+  <g transform="translate(30, 40)">
+    <!-- Glass Panel Background -->
+    <rect width="260" height="280" rx="12" fill="#161b22" fill-opacity="0.7" stroke="#388bfd" stroke-width="1.5"/>
+    <rect width="258" height="278" x="1" y="1" rx="11" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    
+    <!-- Code Scanner Interface Elements -->
+    <circle cx="130" cy="125" r="75" stroke="#21262d" stroke-width="4"/>
+    <circle cx="130" cy="125" r="75" stroke="#58a6ff" stroke-width="2" stroke-dasharray="12 8" opacity="0.6"/>
+    
+    <!-- Abstract Tech Avatar Mesh Geometry -->
+    <g stroke="#39FF14" stroke-width="2" fill="none" opacity="0.85">
+      <!-- Head Contour -->
+      <path d="M130 80 C110 80 100 95 100 115 C100 135 112 145 120 150 L122 158 H138 L140 158 C148 145 160 135 160 115 C160 95 150 80 130 80 Z"/>
+      <!-- Core HUD Glasses Accent -->
+      <path d="M108 116 H126 M134 116 H152 M126 116 C126 124 112 124 108 116 M152 116 C152 124 138 124 134 116 M126 116 H134" stroke="#58a6ff"/>
+      <!-- Shoulders Contours -->
+      <path d="M80 200 C80 175 100 170 120 168 L124 174 H136 L140 168 C160 170 180 175 180 200 V225 H80 Z"/>
+    </g>
+    
+    <!-- Sweeping Laser Scan Overlay Indicator -->
+    <div xmlns="http://w3.org" style="position: relative; width: 260px; height: 280px; overflow: hidden; pointer-events: none;">
+      <div style="position: absolute; left: 10px; width: 240px; height: 4px; background: linear-gradient(to right, transparent, #39FF14, transparent); shadow: 0 0 8px #39FF14; animation: scan 3.5s linear infinite;"></div>
+    </div>
+    
+    <!-- Metadata Tag System Labels -->
+    <rect width="100" height="22" x="80" y="235" rx="11" fill="#21262d" stroke="#30363d"/>
+    <text x="130" y="250" font-family="system-ui" font-size="11" fill="#7d8590" text-anchor="middle" font-weight="bold">USER_ID: 1832</text>
+  </g>
+
+  <!-- Right Window Block (Interactive Code IDE Terminal) -->
+  <g transform="translate(320, 40)">
+    <!-- Main Window Canvas Cover -->
+    <rect width="500" height="280" rx="12" fill="#090d13" fill-opacity="0.9" stroke="#30363d" stroke-width="1.5"/>
+    
+    <!-- Top Decorative Window Chrome Bar Options Header -->
+    <path d="M0 12 Thru 500" fill="#161b22"/>
+    <circle cx="18" cy="18" r="6" fill="#ff5f56"/>
+    <circle cx="38" cy="18" r="6" fill="#ffbd2e"/>
+    <circle cx="58" cy="18" r="6" fill="#27c93f"/>
+    <text x="250" y="22" font-family="monospace" font-size="11" fill="#7d8590" text-anchor="middle">sys_profile_console.sh</text>
+    
+    <!-- Core Script Console Diagnostics Block Rows Output Terminal -->
+    <g transform="translate(25, 45)" class="terminal-text">
+      <!-- Line index 1 -->
+      <g id="line1">
+        <text x="0" y="25" fill="#7d8590" userSpaceOnUse="true">1</text>
+        <text x="25" y="25" class="keyword">printf</text>
+        <text x="80" y="25" fill="#e1e4e8">"</text>
+        <text x="90" y="25" fill="#39FF14" font-weight="bold">Hi, I'm Jesmin Sheladiya 👋\n</text>
+        <text x="325" y="25" fill="#e1e4e8">"</text>
+      </g>
+      
+      <!-- Line index 2 -->
+      <g id="line2" transform="translate(0, 35)">
+        <text x="0" y="25" fill="#7d8590">2</text>
+        <text x="25" y="25" class="variable">current_role</text>
+        <text x="125" y="25" fill="#ff7b72">=</text>
+        <text x="140" y="25" class="string">"Software Developer | Creative Builder"</text>
+      </g>
+
+      <!-- Line index 3 -->
+      <g id="line3" transform="translate(0, 70)">
+        <text x="0" y="25" fill="#7d8590">3</text>
+        <text x="25" y="25" class="variable">mission</text>
+        <text x="90" y="25" fill="#ff7b72">=</text>
+        <text x="105" y="25" class="string">"Building Digital Experiences &amp; Turning Ideas Into Reality"</text>
+      </g>
+
+      <!-- Line index 4 -->
+      <g id="line4" transform="translate(0, 105)">
+        <text x="0" y="25" fill="#7d8590">4</text>
+        <text x="25" y="25" class="variable">location</text>
+        <text x="100" y="25" fill="#ff7b72">=</text>
+        <text x="115" y="25" class="string">"India 🇮🇳"</text>
+      </g>
+      
+      <!-- Line index 5 -->
+      <g id="line5" transform="translate(0, 140)">
+        <text x="0" y="25" fill="#7d8590">5</text>
+        <text x="25" y="25" class="keyword">exec</text>
+        <text x="65" y="25" fill="#e1e4e8">--initialize-stack --verbose</text>
+      </g>
+      
+      <!-- Live Command Prompt Active Matrix Core Cursor Indicator Block -->
+      <g transform="translate(25, 180)">
+        <text x="0" y="25" fill="#39FF14" font-weight="bold">JESMIN_SYS ~$ </text>
+        <text x="115" y="25" fill="#e1e4e8">status --online</text>
+        <rect x="235" y="11" width="8" height="16" fill="#39FF14" style="animation: blink 0.9s infinite;"/>
+      </g>
+    </g>
+  </g>
+</svg>
