@@ -1,10 +1,19 @@
-<br/><br/>
+<div align="center">
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=42&duration=3000&pause=1000&color=39FF14&center=true&vCenter=true&width=650&lines=Hi%2C+I'm+Jesmin+Sheladiya+%F0%9F%91%8B;Hi%2C+I'm+Software+Developer+%F0%9F%96%A5%EF%B8%8F" alt="Jesmin Sheladiya" />
-</p>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:050505,50:101A10,100:39FF14&height=180&section=header&text=JESMIN%20SHELADIYA&fontSize=42&fontColor=FFFFFF&fontAlignY=38&desc=SOFTWARE%20DEVELOPER%20%7C%20SAAS%20BUILDER&descSize=14&descAlignY=60&animation=fadeIn" />
 
-<h3 align="center">A Passionate Software Developer</h3>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg">
+  <img src="./dark.svg" alt="Jesmin Sheladiya — Software Developer">
+</picture>
+
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3000&pause=900&color=39FF14&center=true&vCenter=true&width=650&lines=Hi%2C+I'm+Jesmin+Sheladiya+%F0%9F%91%8B;Software+Developer+%F0%9F%92%BB;Building+Digital+Experiences+%E2%9C%A8;Turning+Ideas+Into+Reality+%F0%9F%9A%80" alt="Typing animation" />
+
+
+<br/>
+
+</div>
 
 <p align="center">
   <a href="https://komarev.com/ghpvc/?username=JesminSheladiya" target="_blank">
@@ -16,7 +25,7 @@
   <a href="mailto:jesminsheladiya1832@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="email">
   </a>
-  <a href="https://in.linkedin.com/in/jesmin-sheladiya-a9744b26a">
+  <a href="https://in.linkedin.com/in/jesmin-sheladiya">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="linkedin">
   </a>
 </p>
@@ -25,8 +34,18 @@
 
 ## 🚀 About Me
 
-- 💻 I’m a **Software Developer** from India 🇮🇳  
-- 🎯 I build **responsive & user‑friendly websites**  
+Hi there! 👋 I'm Jesmin Sheladiya, a passionate Software Developer from India 🇮🇳.
+
+💻 I enjoy building modern, responsive, and user-friendly web applications with clean design and efficient functionality.
+
+🌱 I'm continuously learning new technologies, improving my development skills, and exploring creative solutions to real-world problems.
+
+🛠️ I work with HTML, CSS, JavaScript, React.js, Next.js, Java, Firebase, and PostgreSQL, along with various development tools.
+
+🚀 I love turning ideas into meaningful digital experiences and exploring opportunities to grow as a developer.
+
+### 📬 Contact Me
+
 - 📫 Email: **jesminsheladiya1832@gmail.com**  
 - 🔗 LinkedIn: https://www.linkedin.com/in/jesmin-sheladiya
 
@@ -34,9 +53,7 @@
 
 ## 🛠 Tech Stack
 
-
 <div align="center">
-
 
 <!-- TABLE 1 -->
 | **Languages & Core** | **Frameworks & Libraries** | **Backend & BaaS** |
@@ -49,43 +66,56 @@
 
 <br/>
 
-
 <!-- TABLE 2 -->
 | **Database & Management** | **DevOps & Deployment** | **CMS & Automation** | **API & Testing** |
-|--------------------------|-------------------------|----------------------|-----------------|
-| <img src="https://skillicons.dev/icons?i=postgres" width="25"/> PostgreSQL | <img src="https://skillicons.dev/icons?i=github" width="25"/> GitHub | <img src="https://skillicons.dev/icons?i=wordpress" width="25"/> WordPress | <img src="https://skillicons.dev/icons?i=postman" width="25"/> Postman |
-| <img src="https://skillicons.dev/icons?i=php" width="25"/> phpMyAdmin | <img src="https://skillicons.dev/icons?i=vercel" width="25"/> Vercel | <img src="https://meta-q.cdn.bubble.io/cdn-cgi/image/w=64,h=64,f=auto,dpr=1,fit=contain/f1740327389123x713161792968389100/n8n%20plugin.png" width="25"/> n8n | |
-
+|:---|:---|:---|:---|
+| <img src="https://skillicons.dev/icons?i=postgres" width="25" alt="PostgreSQL"> PostgreSQL | <img src="https://skillicons.dev/icons?i=github" width="25" alt="GitHub"> GitHub | <img src="https://skillicons.dev/icons?i=wordpress" width="25" alt="WordPress"> WordPress | <img src="https://skillicons.dev/icons?i=postman" width="25" alt="Postman"> Postman |
+| phpMyAdmin | <img src="https://skillicons.dev/icons?i=vercel" width="25" alt="Vercel"> Vercel | n8n | |
 
 </div>
-
 
 ---
 
 ## 📂 Featured Projects
 
-<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<table align="center" width="100%">
   <tr>
-    <td align="center">
+    <td align="center" width="50%">
       <a href="https://github.com/JesminSheladiya/NetWorld">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=NetWorld&theme=dark" alt="NetWorld" width="100%" />
+        <img
+          src="https://github-stats-extended.vercel.app/api/pin/?username=JesminSheladiya&amp;repo=NetWorld&amp;theme=radical"
+          alt="NetWorld"
+          width="100%"
+        >
       </a>
     </td>
-    <td align="center">
+    <td align="center" width="50%">
       <a href="https://github.com/JesminSheladiya/ToDo-App">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=ToDo-App&theme=dark" alt="ToDo-App" width="100%" />
+        <img
+          src="https://github-stats-extended.vercel.app/api/pin/?username=JesminSheladiya&amp;repo=ToDo-App&amp;theme=radical"
+          alt="ToDo App"
+          width="100%"
+        >
       </a>
     </td>
   </tr>
   <tr>
-    <td align="center">
+    <td align="center" width="50%">
       <a href="https://github.com/JesminSheladiya/GHCI25-Photo-Badge">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI25-Photo-Badge&theme=dark" alt="Photo Badge" width="100%" />
+        <img
+          src="https://github-stats-extended.vercel.app/api/pin/?username=JesminSheladiya&amp;repo=GHCI25-Photo-Badge&amp;theme=radical"
+          alt="GHCI25 Photo Badge"
+          width="100%"
+        >
       </a>
     </td>
-    <td align="center">
+    <td align="center" width="50%">
       <a href="https://github.com/JesminSheladiya/GHCI24-Photo-Editor-Frame-Uploader">
-        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=JesminSheladiya&repo=GHCI24-Photo-Editor-Frame-Uploader&theme=dark" alt="Photo Editor" width="100%" />
+        <img
+          src="https://github-stats-extended.vercel.app/api/pin/?username=JesminSheladiya&amp;repo=GHCI24-Photo-Editor-Frame-Uploader&amp;theme=radical"
+          alt="GHCI24 Photo Editor"
+          width="100%"
+        >
       </a>
     </td>
   </tr>
@@ -93,21 +123,28 @@
 
 ---
 
+
 ## 📊 GitHub Stats
 
-<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<table align="center" width="100%">
   <tr>
-    <td align="center">
-      <a href="https://github.com/JesminSheladiya">
-        <img src="https://github-readme-stats-fast.vercel.app/api?username=JesminSheladiya&show_icons=true&theme=radical" alt="GitHub Stats" width="100%" />
-      </a>
+    <td align="center" width="50%">
+      <img
+        src="https://github-stats-extended.vercel.app/api?username=JesminSheladiya&amp;show_icons=true&amp;theme=radical"
+        alt="GitHub Stats"
+        width="100%"
+      />
     </td>
-    <td align="center">
-      <a href="https://github.com/JesminSheladiya">
-        <img src="https://github-readme-stats-fast.vercel.app/api/streak?username=JesminSheladiya&theme=radical" alt="GitHub Streak" width="100%" />
-      </a>
+    <td align="center" width="50%">
+      <img
+        src="https://streak-stats.demolab.com/?user=JesminSheladiya&amp;theme=radical"
+        alt="GitHub Streak"
+        width="100%"
+      />
     </td>
   </tr>
 </table>
+
+
 
 ---
