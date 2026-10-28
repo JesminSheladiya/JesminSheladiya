@@ -1,29 +1,29 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 680" width="1100" height="680">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1100 680"
+     width="1100"
+     height="680">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
-      <stop offset="0%" stop-color="#071b2e"/>
-      <stop offset="65%" stop-color="#030914"/>
-      <stop offset="100%" stop-color="#01040a"/>
+    <!-- Background & Terminal Gradients -->
+    <radialGradient id="screen-glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#071b2e" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#030914" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#01040a" stop-opacity="1"/>
     </radialGradient>
 
-    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00f3ff"/>
       <stop offset="50%" stop-color="#00a8ff"/>
       <stop offset="100%" stop-color="#0066ff"/>
     </linearGradient>
 
-    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="stream-flow" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#00f3ff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#00f3ff" stop-opacity="0.8"/>
       <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
     </linearGradient>
 
-    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
-      <circle cx="3" cy="3" r=".8" fill="#00f3ff" opacity=".2"/>
-    </pattern>
-
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <!-- Glow Filters -->
+    <filter id="cyan-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -31,242 +31,323 @@
       </feMerge>
     </filter>
 
-    <clipPath id="portrait">
-      <rect x="36" y="104" width="430" height="445" rx="10"/>
-    </clipPath>
+    <filter id="intense-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
+      <feGaussianBlur stdDeviation="2" result="blur1"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-    <path id="outer" d="M35 35H1065Q1080 35 1080 50V630Q1080 645 1065 645H35Q20 645 20 630V50Q20 35 35 35"/>
+    <!-- Matrix Dot Pattern -->
+    <pattern id="matrix-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.75" fill="#00f3ff" opacity="0.12"/>
+    </pattern>
 
-    <style>
-      .mono {
-        font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-      }
-      .cyan { fill: #00f3ff; }
-      .white { fill: #e2f1ff; }
-      .muted { fill: #8295aa; }
-      .label { fill: #38bdf8; font-weight: bold; }
-      .small { font-size: 12px; }
-      .panel {
-        fill: #030b17;
-        fill-opacity: .88;
-        stroke: #00d9ff;
-        stroke-opacity: .5;
-        stroke-width: 1.2;
-      }
+    <!-- Scanline Mask -->
+    <linearGradient id="scan-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
 
-      @keyframes pulse {
-        0%, 100% { opacity: .35; }
-        50% { opacity: 1; }
-      }
-      @keyframes blink {
-        0%, 48% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-      @keyframes scan {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(445px); }
-      }
-      @keyframes dash {
-        to { stroke-dashoffset: -350; }
-      }
+    <!-- Animated neon flow -->
+    <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0"/>
+      <stop offset="22%" stop-color="#00f3ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="1"/>
+      <stop offset="78%" stop-color="#00f3ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </linearGradient>
 
-      .pulse { animation: pulse 2s infinite; }
-      .cursor { animation: blink 1s steps(1) infinite; }
-      .wire {
-        stroke-dasharray: 20 150;
-        animation: dash 7s linear infinite;
-      }
-      .scan { animation: scan 5s linear infinite; }
-    </style>
+    <filter id="flow-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b1"/>
+      <feGaussianBlur stdDeviation="9" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <path id="outer-flow-path"
+          d="M35 35 H1065 Q1080 35 1080 50 V630 Q1080 645 1065 645 H35 Q20 645 20 630 V50 Q20 35 35 35"
+          fill="none"/>
+
+    <path id="left-flow-path"
+          d="M49 75 H491 Q505 75 505 89 V556 Q505 570 491 570 H49 Q35 570 35 556 V89 Q35 75 49 75"
+          fill="none"/>
+
+    <path id="right-flow-path"
+          d="M539 75 H1036 Q1050 75 1050 89 V556 Q1050 570 1036 570 H539 Q525 570 525 556 V89 Q525 75 539 75"
+          fill="none"/>
+
   </defs>
 
-  <!-- MAIN DISPLAY HOUSING -->
-  <rect x="15" y="15" width="1070" height="650" rx="20"
-        fill="#02060f" stroke="#00f3ff" stroke-width="2"
-        filter="url(#glow)"/>
+  <style>
+    .font-mono {
+      font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+    }
+    .neon-text {
+      fill: #00f3ff;
+      filter: url(#cyan-glow);
+    }
+    .dim-cyan { fill: #38bdf8; }
+    .label-cyan { fill: #00d8f6; font-weight: 600; }
+    .muted-dots { fill: #1e3a5f; letter-spacing: 2px; }
+    .white-text { fill: #e2f1ff; }
+    
+    /* Flow Animations */
+    @keyframes pulse-flow {
+      0%, 100% { opacity: 0.35; stroke-dashoffset: 0; }
+      50% { opacity: 0.85; stroke-dashoffset: -40; }
+    }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes radar-scan {
+      0% { transform: translateY(0px); opacity: 0; }
+      15% { opacity: 0.75; }
+      85% { opacity: 0.75; }
+      100% { transform: translateY(420px); opacity: 0; }
+    }
+    @keyframes border-run {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .radar-line {
+      animation: radar-scan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .cursor-blink {
+      animation: blink 0.9s infinite;
+    }
+    .animated-wire {
+      stroke-dasharray: 8 12;
+      animation: pulse-flow 3s linear infinite;
+    }
 
-  <rect x="19" y="19" width="1062" height="642" rx="17" fill="url(#bg)"/>
-  <rect x="20" y="20" width="1060" height="640" rx="16" fill="url(#dots)"/>
+    .flow-border {
+      fill: none;
+      stroke: url(#flow-gradient);
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 26 150;
+      filter: url(#flow-glow);
+    }
+    .flow-border-soft {
+      fill: none;
+      stroke: #00f3ff;
+      stroke-width: 1;
+      stroke-opacity: 0.25;
+      stroke-dasharray: 4 18;
+    }
+    .flow-particle {
+      fill: #00f3ff;
+      filter: url(#flow-glow);
+    }
+    .flow-particle-purple {
+      fill: #a78bfa;
+      filter: url(#flow-glow);
+    }
 
-  <!-- ANIMATED NEON PERIMETER -->
-  <use xlink:href="#outer" fill="none" stroke="#00f3ff"
-       stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="5 15">
-    <animate attributeName="stroke-dashoffset"
-             from="0" to="-160" dur="8s" repeatCount="indefinite"/>
-  </use>
+  </style>
 
-  <use xlink:href="#outer" fill="none" stroke="url(#flow)"
-       stroke-width="3" stroke-dasharray="45 260" filter="url(#glow)">
-    <animate attributeName="stroke-dashoffset"
-             from="0" to="-1220" dur="7s" repeatCount="indefinite"/>
-  </use>
+  <!-- Outer Display Housing -->
+  <rect x="15" y="15" width="1070" height="650" rx="20" fill="#02060f" stroke="#00f3ff" stroke-width="1.8" stroke-opacity="0.6" filter="url(#cyan-glow)"/>
+  <rect x="18" y="18" width="1064" height="644" rx="18" fill="url(#screen-glow)"/>
 
-  <!-- TOP TERMINAL HEADER -->
+
+  <!-- ================= NEON FLOW SYSTEM ================= -->
+  <g pointer-events="none">
+    <!-- Slow ambient circuit traces -->
+    <use href="#outer-flow-path" class="flow-border-soft">
+      <animate attributeName="stroke-dashoffset" from="0" to="-110" dur="9s" repeatCount="indefinite"/>
+    </use>
+    <use href="#left-flow-path" class="flow-border-soft">
+      <animate attributeName="stroke-dashoffset" from="0" to="-90" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#right-flow-path" class="flow-border-soft">
+      <animate attributeName="stroke-dashoffset" from="0" to="-90" dur="8s" repeatCount="indefinite"/>
+    </use>
+
+    <!-- Bright traveling energy -->
+    <use href="#outer-flow-path" class="flow-border">
+      <animate attributeName="stroke-dashoffset" from="0" to="-880" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".35;1;.45" dur="6s" repeatCount="indefinite"/>
+    </use>
+    <use href="#outer-flow-path" class="flow-border" opacity=".45">
+      <animate attributeName="stroke-dashoffset" from="0" to="-880" dur="6s" begin="-2s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#left-flow-path" class="flow-border" opacity=".9">
+      <animate attributeName="stroke-dashoffset" from="0" to="-620" dur="5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#right-flow-path" class="flow-border" opacity=".9">
+      <animate attributeName="stroke-dashoffset" from="0" to="-620" dur="5.8s" begin="-1.4s" repeatCount="indefinite"/>
+    </use>
+
+    <!-- Traveling particles around the interface -->
+    <circle r="3.2" class="flow-particle">
+      <animateMotion dur="5.5s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#outer-flow-path"/>
+      </animateMotion>
+    </circle>
+    <circle r="2.2" class="flow-particle-purple">
+      <animateMotion dur="7s" begin="-2.2s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#outer-flow-path"/>
+      </animateMotion>
+    </circle>
+    <circle r="2.6" class="flow-particle">
+      <animateMotion dur="4.7s" begin="-1.1s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#left-flow-path"/>
+      </animateMotion>
+    </circle>
+    <circle r="2.6" class="flow-particle-purple">
+      <animateMotion dur="5.2s" begin="-2.7s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#right-flow-path"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- CRT Scanline Overlay -->
+  <line x1="20" y1="0" x2="1080" y2="0" stroke="url(#scan-grad)" stroke-width="40" opacity="0.35">
+    <animateTransform attributeName="transform" type="translate" from="0 20" to="0 640" dur="6s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- ================= TOP BAR NAVIGATION ================= -->
+  <!-- Window Controls -->
   <circle cx="48" cy="46" r="6" fill="#ff5f56"/>
   <circle cx="68" cy="46" r="6" fill="#ffbd2e"/>
   <circle cx="88" cy="46" r="6" fill="#27c93f"/>
 
-  <text x="114" y="51" class="mono cyan" font-size="14" font-weight="bold">
-    jesmin/README.md
-  </text>
+  <!-- Left Main Tab -->
+  <text x="114" y="50" class="font-mono label-cyan" font-size="14" font-weight="bold">jesmin/README.md</text>
 
-  <text x="810" y="50" class="mono small muted">PROFILE.SYS</text>
+  <text x="810" y="50" class="font-mono dim-cyan" font-size="12">PROFILE.SYS</text>
+  <circle cx="944" cy="46" r="4" fill="#39ff14" filter="url(#cyan-glow)"><animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/></circle>
+  <text x="956" y="50" class="font-mono" font-size="12" fill="#39ff14">ONLINE</text>
 
-  <circle cx="944" cy="46" r="4" fill="#39ff14" class="pulse" filter="url(#glow)"/>
-  <text x="956" y="50" class="mono small" fill="#39ff14">ONLINE</text>
+  <!-- ================= LEFT PANEL: VISUAL.MAP ================= -->
+  <g transform="translate(35, 75)">
+    <!-- Box Frame -->
+    <rect width="470" height="495" rx="14" fill="#030b17" fill-opacity="0.6" stroke="#00f3ff" stroke-width="1.2" stroke-opacity="0.4" filter="url(#cyan-glow)"/>
+    <rect width="470" height="495" rx="14" fill="none" stroke="#00f3ff" stroke-width="1.8" stroke-dasharray="80 320" class="animated-wire"/>
 
-  <!-- LEFT PANEL: VISUAL MAP -->
-  <rect x="35" y="75" width="455" height="495" rx="13" class="panel"/>
+    <!-- Header Badge -->
+    <path d="M 12 0 L 115 0 L 105 18 L 12 18 Z" fill="#00f3ff" fill-opacity="0.15"/>
+    <text x="18" y="13" class="font-mono label-cyan" font-size="10" letter-spacing="1.5">VISUAL.MAP</text>
 
-  <path d="M47 75H154L143 94H47Z" fill="#00f3ff" fill-opacity=".15"/>
+    <!-- Matrix Background Pattern within the frame -->
+    <rect x="10" y="24" width="450" height="460" fill="url(#matrix-dots)" rx="8"/>
 
-  <text x="53" y="88" class="mono cyan" font-size="10" letter-spacing="1.4">
-    VISUAL.MAP // USER PROFILE
-  </text>
+    <!-- Radar Flow / Scanning Beam -->
+    <g class="radar-line">
+      <line x1="12" y1="28" x2="458" y2="28" stroke="url(#neon-cyan)" stroke-width="1.5" filter="url(#cyan-glow)"/>
+      <polygon points="12,28 458,28 458,55 12,55" fill="url(#stream-flow)" opacity="0.3"/>
+    </g>
 
-  <!-- PROFILE PORTRAIT -->
-  <g clip-path="url(#portrait)">
-    <rect x="36" y="104" width="430" height="445" fill="#061321"/>
 
-    <image x="36" y="104" width="430" height="445"
-           preserveAspectRatio="xMidYMid slice"
-           xlink:href="https://raw.githubusercontent.com/JesminSheladiya/JesminSheladiya/2e7b3526013dd1cb9142b7b7c92899db32a7fe68/jesmin-ascii.svg"/>
+    <!-- Portrait data-flow shimmer -->
+    <g pointer-events="none" opacity=".7">
+      <rect x="55" y="108" width="430" height="2" fill="url(#flow-gradient)" filter="url(#flow-glow)">
+        <animate attributeName="y" values="108;545;108" dur="5.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="55" y="108" width="430" height="1" fill="#00f3ff" opacity=".5">
+        <animate attributeName="y" values="545;108;545" dur="8s" repeatCount="indefinite"/>
+      </rect>
 
-    <rect x="36" y="104" width="430" height="445"
-          fill="#031626" fill-opacity=".18"/>
+      <circle cx="90" cy="145" r="1.5" fill="#00f3ff">
+        <animate attributeName="cx" values="90;470;90" dur="4.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="470" cy="260" r="1.2" fill="#a78bfa">
+        <animate attributeName="cx" values="470;70;470" dur="6.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="95" cy="430" r="1.3" fill="#00f3ff">
+        <animate attributeName="cx" values="95;465;95" dur="5.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
 
-    <rect x="36" y="104" width="430" height="445" fill="url(#dots)"/>
+    <!-- Reference portrait supplied by user -->
+    <defs>
+      <clipPath id="portrait-clip">
+        <rect x="10" y="24" width="450" height="460" rx="8"/>
+      </clipPath>
+    </defs>
 
-    <path d="M36 160H466 M36 250H466 M36 340H466 M36 430H466"
-          stroke="#00f3ff" stroke-width=".8"
-          stroke-dasharray="3 12" opacity=".55"/>
+    <g clip-path="url(#portrait-clip)">
+      <image
+        x="10" y="24"
+        width="450" height="460"
+        preserveAspectRatio="xMidYMid slice"
+        href="https://raw.githubusercontent.com/JesminSheladiya/JesminSheladiya/2e7b3526013dd1cb9142b7b7c92899db32a7fe68/jesmin-ascii.svg"
+        opacity="0.96"/>
 
-    <!-- MOVING SCAN BEAM -->
-    <rect x="36" y="104" width="430" height="3"
-          fill="url(#flow)" filter="url(#glow)" class="scan"/>
+      <!-- Neon scan flowing over the real portrait -->
+      <rect x="10" y="24" width="450" height="2"
+            fill="url(#flow-gradient)" filter="url(#flow-glow)" opacity=".8">
+        <animate attributeName="y"
+                 values="24;482;24"
+                 dur="5.5s"
+                 repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Subtle cyan data lines -->
+      <path d="M10 120 H460 M10 270 H460 M10 410 H460"
+            stroke="#00f3ff" stroke-width="0.7"
+            stroke-dasharray="2 13" opacity=".28">
+        <animate attributeName="stroke-dashoffset"
+                 from="0" to="-90"
+                 dur="3.5s"
+                 repeatCount="indefinite"/>
+      </path>
+    </g>
   </g>
 
+  <!-- RIGHT PANEL: JESMIN PROFILE -->
+  <g transform="translate(525,75)">
+    <rect width="525" height="495" rx="14" fill="#030b17" fill-opacity=".75" stroke="#00f3ff" stroke-width="1.2" stroke-opacity=".4" filter="url(#cyan-glow)"/>
+    <rect width="525" height="495" rx="14" fill="none" stroke="#00f3ff" stroke-width="1.8" stroke-dasharray="80 320" class="animated-wire"/>
+    <path d="M12 0H125L115 18H12Z" fill="#00f3ff" fill-opacity=".15"/>
+    <text x="18" y="13" class="font-mono label-cyan" font-size="10">SYSTEM.INFO</text>
+    <circle cx="452" cy="18" r="4" fill="#39ff14"><animate attributeName="opacity" values="1;.4;1" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="464" y="22" class="font-mono" font-size="11" fill="#39ff14">ACTIVE</text>
+    <text x="12" y="49" class="font-mono" font-size="12"><tspan fill="#3b82f6">jesmin@developer</tspan><tspan fill="#8295aa">:~$ </tspan><tspan fill="#e2f1ff">./profile.sh</tspan></text>
+    <path d="M12 61H510" stroke="#1c4258"/>
+    <g class="font-mono" font-size="11.5">
+      <text x="12" y="90" class="label-cyan">&gt; Name</text><text x="140" y="90" class="white-text">Jesmin Sheladiya</text>
+      <text x="12" y="116" class="label-cyan">&gt; Role</text><text x="140" y="116" class="white-text">Software Developer</text>
+      <text x="12" y="142" class="label-cyan">&gt; Location</text><text x="140" y="142" class="white-text">India</text>
+      <text x="12" y="168" class="label-cyan">&gt; Focus</text><text x="140" y="168" class="white-text">Web Development &amp; UI</text>
+      <text x="12" y="194" class="label-cyan">&gt; Frontend</text><text x="140" y="194" class="white-text">HTML, CSS, JavaScript</text>
+      <text x="12" y="220" class="label-cyan">&gt; Frameworks</text><text x="140" y="220" class="white-text">React, Next.js, Bootstrap</text>
+      <text x="12" y="246" class="label-cyan">&gt; Backend</text><text x="140" y="246" class="white-text">Java, Firebase</text>
+      <text x="12" y="272" class="label-cyan">&gt; Database</text><text x="140" y="272" class="white-text">PostgreSQL</text>
+      <text x="12" y="298" class="label-cyan">&gt; Tools</text><text x="140" y="298" class="white-text">GitHub, Vercel, Postman, n8n</text>
+    </g>
+    <path d="M12 310H510" stroke="#1c4258"/>
+    <text x="12" y="331" class="font-mono label-cyan" font-size="12">&gt; SYSTEM STATUS</text>
+    <g class="font-mono" font-size="11.5">
+      <circle cx="19" cy="352" r="4" fill="#39ff14"/><text x="31" y="356" class="label-cyan">Frontend</text><text x="175" y="356" class="white-text">Building modern interfaces</text>
+      <circle cx="19" cy="380" r="4" fill="#00f3ff"/><text x="31" y="384" class="label-cyan">Development</text><text x="175" y="384" class="white-text">Learning &amp; creating</text>
+      <circle cx="19" cy="408" r="4" fill="#a78bfa"/><text x="31" y="412" class="label-cyan">Open Source</text><text x="175" y="412" class="white-text">Exploring new possibilities</text>
+    </g>
+    <path d="M12 431H510" stroke="#1c4258"/>
+    <text x="12" y="464" class="font-mono" font-size="12"><tspan fill="#3b82f6">jesmin@developer</tspan><tspan fill="#8295aa">:~$ </tspan><tspan fill="#e2f1ff">status --online</tspan></text>
+    <rect x="231" y="451" width="7" height="15" fill="#00f3ff" class="cursor-blink"/>
+  </g>
   <!-- PROFILE IDENTIFIER -->
-  <rect x="47" y="515" width="408" height="34" rx="5"
-        fill="#020914" fill-opacity=".9"
-        stroke="#00f3ff" stroke-opacity=".7"/>
-
-  <text x="60" y="536" class="mono cyan" font-size="11">
-    USER_NODE: JESMIN_SHELADIYA
-  </text>
-
-  <circle cx="438" cy="532" r="4" fill="#39ff14" class="pulse"/>
-
-  <!-- RIGHT PANEL: SYSTEM INFO -->
-  <rect x="510" y="75" width="540" height="495" rx="13" class="panel"/>
-
-  <path d="M522 75H635L624 94H522Z" fill="#00f3ff" fill-opacity=".15"/>
-
-  <text x="528" y="88" class="mono cyan" font-size="10" letter-spacing="1.4">
-    SYSTEM.INFO
-  </text>
-
-  <circle cx="985" cy="86" r="4" fill="#39ff14" class="pulse" filter="url(#glow)"/>
-  <text x="996" y="90" class="mono" font-size="10" fill="#39ff14">ACTIVE</text>
-
-  <!-- TERMINAL PROMPT -->
-  <text x="535" y="125" class="mono small">
-    <tspan fill="#3b82f6" font-weight="bold">jesmin@developer</tspan>
-    <tspan class="muted">:~$ </tspan>
-    <tspan class="white">./profile.sh</tspan>
-  </text>
-
-  <path d="M530 139H1030" stroke="#1c4258"/>
-
-  <!-- PERSONAL DETAILS -->
-  <g class="mono" font-size="12">
-    <text x="535" y="165" class="label">&gt; Name</text>
-    <text x="665" y="165" class="white">Jesmin Sheladiya</text>
-
-    <text x="535" y="191" class="label">&gt; Role</text>
-    <text x="665" y="191" class="white">Software Developer</text>
-
-    <text x="535" y="217" class="label">&gt; Location</text>
-    <text x="665" y="217" class="white">India</text>
-
-    <text x="535" y="243" class="label">&gt; Focus</text>
-    <text x="665" y="243" class="white">Web Development &amp; UI</text>
-
-    <text x="535" y="269" class="label">&gt; Frontend</text>
-    <text x="665" y="269" class="white">HTML, CSS, JavaScript</text>
-
-    <text x="535" y="295" class="label">&gt; Frameworks</text>
-    <text x="665" y="295" class="white">React, Next.js, Bootstrap</text>
-
-    <text x="535" y="321" class="label">&gt; Backend</text>
-    <text x="665" y="321" class="white">Java, Firebase</text>
-
-    <text x="535" y="347" class="label">&gt; Database</text>
-    <text x="665" y="347" class="white">PostgreSQL</text>
-
-    <text x="535" y="373" class="label">&gt; Tools</text>
-    <text x="665" y="373" class="white">GitHub, Vercel, Postman, n8n</text>
-  </g>
-
-  <!-- DIVIDER -->
-  <path d="M530 391H1030" stroke="#1c4258"/>
-
-  <!-- SYSTEM STATUS: NO FEATURED PROJECTS -->
-  <text x="535" y="418" class="mono cyan" font-size="12" font-weight="bold">
-    &gt; SYSTEM STATUS
-  </text>
-
-  <g class="mono" font-size="12">
-    <circle cx="551" cy="444" r="4" fill="#39ff14" class="pulse"/>
-    <text x="563" y="448" class="label">Frontend</text>
-    <text x="700" y="448" class="white">Building modern interfaces</text>
-
-    <circle cx="551" cy="471" r="4" fill="#00f3ff" class="pulse"/>
-    <text x="563" y="475" class="label">Development</text>
-    <text x="700" y="475" class="white">Learning &amp; creating</text>
-
-    <circle cx="551" cy="498" r="4" fill="#a78bfa" class="pulse"/>
-    <text x="563" y="502" class="label">Open Source</text>
-    <text x="700" y="502" class="white">Exploring new possibilities</text>
-  </g>
-
-  <path d="M530 520H1030" stroke="#1c4258"/>
-
-  <!-- ACTIVE TERMINAL -->
-  <text x="535" y="542" class="mono small">
-    <tspan fill="#3b82f6" font-weight="bold">jesmin@developer</tspan>
-    <tspan class="muted">:~$ </tspan>
-    <tspan class="white">status --online</tspan>
-  </text>
-
-  <rect x="750" y="530" width="7" height="15"
-        fill="#00f3ff" class="cursor"/>
-
-  <!-- FOOTER: CONTACT LINKS -->
+  <rect x="48" y="522" width="444" height="32" rx="5" fill="#020914" fill-opacity=".92" stroke="#00f3ff" stroke-opacity=".65"/>
+  <text x="61" y="542" class="font-mono label-cyan" font-size="11">USER_NODE: JESMIN_SHELADIYA</text>
+  <circle cx="474" cy="538" r="4" fill="#39ff14"/>
+  <!-- CONTACT FOOTER -->
   <path d="M35 588H1050" stroke="#00f3ff" stroke-opacity=".4"/>
-
-  <text x="45" y="614" class="mono white" font-size="12">
-    ESTABLISH CONNECTION //
-  </text>
-
-  <a xlink:href="mailto:jesminsheladiya1832@gmail.com">
-    <text x="45" y="638" class="mono cyan" font-size="12">
-      EMAIL: jesminsheladiya1832@gmail.com
-    </text>
-  </a>
-
-  <a xlink:href="https://github.com/JesminSheladiya">
-    <text x="565" y="614" class="mono cyan" font-size="12">
-      GITHUB: github.com/JesminSheladiya
-    </text>
-  </a>
-
-  <a xlink:href="https://in.linkedin.com/in/jesmin-sheladiya">
-    <text x="565" y="638" class="mono cyan" font-size="12">
-      LINKEDIN: linkedin.com/in/jesmin-sheladiya
-    </text>
-  </a>
-
-  <circle cx="1035" cy="614" r="4" fill="#39ff14"
-          filter="url(#glow)" class="pulse"/>
+  <text x="45" y="614" class="font-mono white-text" font-size="12">ESTABLISH CONNECTION //</text>
+  <a href="mailto:jesminsheladiya1832@gmail.com"><text x="45" y="638" class="font-mono label-cyan" font-size="12">EMAIL: jesminsheladiya1832@gmail.com</text></a>
+  <a href="https://github.com/JesminSheladiya" target="_blank"><text x="565" y="614" class="font-mono label-cyan" font-size="12">GITHUB: github.com/JesminSheladiya</text></a>
+  <a href="https://in.linkedin.com/in/jesmin-sheladiya" target="_blank"><text x="565" y="638" class="font-mono label-cyan" font-size="12">LINKEDIN: linkedin.com/in/jesmin-sheladiya</text></a>
+  <circle cx="1035" cy="614" r="4" fill="#39ff14" filter="url(#cyan-glow)"/>
 </svg>
