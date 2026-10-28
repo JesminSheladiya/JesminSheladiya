@@ -130,7 +130,7 @@
 
     <image x="36" y="104" width="430" height="445"
            preserveAspectRatio="xMidYMid slice"
-           xlink:href="https://github.com/JesminSheladiya.png"/>
+           xlink:href="https://raw.githubusercontent.com/JesminSheladiya/JesminSheladiya/2e7b3526013dd1cb9142b7b7c92899db32a7fe68/jesmin-ascii.svg"/>
 
     <rect x="36" y="104" width="430" height="445"
           fill="#031626" fill-opacity=".18"/>
